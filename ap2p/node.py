@@ -11,24 +11,12 @@ from collections.abc import Awaitable, Callable
 from typing import Any, Iterable, Optional
 
 from ap2p.address import Address
-
-# Type aliases for message handlers
-MessageHandler = Callable[[bytes, StreamWriter], Awaitable[Any]]
-HandlerDict = dict[bytes, MessageHandler]
-
+from ap2p.type_utils import HandlerDict, PeerDisconnectedException
 
 # Message type's byte sequences
 BACK_CONNECT = b"HELO"
 PEER_REQ = b"PREQ"
 PEER_RES = b"PRES"
-
-
-class PeerDisconnectedException(Exception):
-    """
-    An exception raised when a peer disconnects unexpectedly.
-    """
-
-    pass
 
 
 class Node:
