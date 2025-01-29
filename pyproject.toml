@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "ap2p"
+version = "0.0.1"
+requires-python = ">=3.4"
+description = "A simple peer-to-peer network using asyncio"
+readme = "README.md"
+keywords = ["asyncio", "networking", "p2p", "peer to peer"]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
