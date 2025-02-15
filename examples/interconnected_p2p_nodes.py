@@ -1,8 +1,7 @@
 from asyncio import create_task, gather, run
 from ipaddress import ip_address
 
-from address import Address
-from peer_discovery import PeerDiscoveryNode
+from ap2p import Address, PeerDiscoveryNode
 
 LOCALHOST = ip_address("127.0.0.1")
 
